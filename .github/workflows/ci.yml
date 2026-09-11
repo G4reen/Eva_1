@@ -11,20 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ms-vehiculos   # el pom.xml está dentro de esta carpeta
-
+        working-directory: ms-vehiculos
     steps:
-    - uses: actions/checkout@v4
-
+    - uses: actions/checkout@v3
     - name: Set up JDK 21
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v3
       with:
         java-version: '21'
         distribution: 'temurin'
         cache: 'maven'
-
-    - name: Dar permisos de ejecución al Maven Wrapper
+    - name: Give execute permission to mvnw
       run: chmod +x mvnw
-
-    - name: Build con Maven Wrapper
+    - name: Build with Maven
       run: ./mvnw clean install

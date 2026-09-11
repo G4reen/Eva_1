@@ -1,3 +1,4 @@
+# Corrección de timeout de BD
 spring:
   application:
     name: ms-vehiculos
