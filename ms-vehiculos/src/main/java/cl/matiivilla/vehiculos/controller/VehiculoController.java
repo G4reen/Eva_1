@@ -53,4 +53,10 @@ public class VehiculoController {
         vehiculoService.delete(id);
         return ResponseEntity.noContent().build();
     }
+    @GetMapping("/disponibles")
+    @Operation(summary = "Listar vehículos disponibles")
+    public List<VehiculoResponse> findDisponibles() {
+        return vehiculoService.findDisponibles();
 }
+}
+

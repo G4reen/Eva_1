@@ -90,4 +90,9 @@ public class VehiculoService {
                 .disponible(vehiculo.getDisponible())
                 .build();
     }
+    public List<VehiculoResponse> findDisponibles() {
+    return vehiculoRepository.findByDisponibleTrue().stream()
+            .map(this::toResponse)
+            .toList();
+}
 }
