@@ -24,3 +24,16 @@ jobs:
       run: chmod +x mvnw
     - name: Build with Maven
       run: ./mvnw clean install
+
+    - name: Mostrar IP pública del entorno cloud simulado
+      run: curl -s https://api.ipify.org && echo
+
+    - name: Desplegar microservicio (simulado)
+      run: |
+        nohup java -jar target/*.jar --server.port=9004 > app.log 2>&1 &
+        sleep 25
+
+    - name: Verificar que el servicio responde
+      run: |
+        curl -v http://localhost:9004/api/v1/vehiculos
+        cat app.log
