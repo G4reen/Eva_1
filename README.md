@@ -1,8 +1,9 @@
 # Eva_1 — Pipeline de Despliegue: ms-vehiculos
 
 Evaluación Parcial 1 — DOY0101 Ingeniería DevOps. Repositorio Git para el microservicio
-**ms-vehiculos** (Spring Boot 3.5 / Java 21), preparado como base del pipeline DevOps
-que se construirá durante el semestre.
+**ms-vehiculos** (Spring Boot 3.5 / Java 21), preparado como base del pipeline DevOps.
+
+
 
 ## Estructura del repositorio
 
@@ -83,6 +84,11 @@ El workflow (`.github/workflows/ci.yml`) se activa en dos casos:
 El job instala JDK 21 (requerido por el `pom.xml`), corre `./mvnw clean install` dentro de
 `ms-vehiculos/` y actúa como gate mínimo de integración continua para este entorno cloud
 simulado.
+## Conclusiones
+
+### Reflexión individual — Bastian
+
+[La verdad es que trabajar con github actions y ocupar el microservicio fue una tarea entretenida más allá de lo que es la materia, me costo un poco el tema de las feature ya que hice commits que quedaron como "a", "arreglo", "cambio 1 o 2", eso queda como enseñanza para más adelante, si pudiera repetir el encargo me gustaria tomarme más tiempo para poder entenderlo al 100% y no al 70%, ya que hubieron cosas con las que realmente me enrede bastante, fallos con temas de versiones de java y demases.]
 
 ## Uso de Inteligencia Artificial
 
