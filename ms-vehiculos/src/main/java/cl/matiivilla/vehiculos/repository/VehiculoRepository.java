@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface VehiculoRepository extends JpaRepository<Vehiculo, Long> {
 
     boolean existsByPatente(String patente);
-
+    
     Optional<Vehiculo> findByPatente(String patente);
+    List<Vehiculo> findByDisponibleTrue();
 }
-List<Vehiculo> findByDisponibleTrue();
